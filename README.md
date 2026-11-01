@@ -9,7 +9,7 @@ A Pygame maze project I built up over a few labs in my A.I. for Game Programming
   - BFS (finds the path with the fewest steps)
   - Dijkstra (finds the cheapest path)
 - Weighted terrain: floor costs 1, mud costs 3, web costs 6, so the shortest path isn't always the cheapest
-- Visualization: you can see explored cells, the frontier, the current cell, and the final path. Dijkstra also shows the total cost on each cell it explored
+- Visualization: you can see explored cells, the frontier, the current cell, and the final path
 - Search results (steps, total cost, nodes explored) print in the terminal for each NPC
 
 **Controls:** arrow keys/WASD to move, SPACE for a new maze
