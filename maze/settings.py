@@ -18,4 +18,8 @@ START_COLOR = (39, 174, 96)
 GOAL_COLOR = (192, 57, 43)
 PLAYER_COLOR = (52, 152, 219)
 BFS_COLOR = (241, 196, 15)
-DFS_COLOR = (190, 90, 230)
+DIJKSTRA_COLOR = (190, 90, 230)
+
+EXTRA_LOOPS = 30
+TERRAIN_COST = {"floor": 1, "mud": 3, "web": 6}
+TERRAIN_COLOR = {"mud": (95, 65, 35), "web": (70, 90, 120)}
