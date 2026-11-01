@@ -1,5 +1,4 @@
 import random
-from collections import deque
 import pygame
 from .settings import CELL, WALL, COLS, ROWS
 from .wall import Wall
@@ -32,6 +31,7 @@ def generate_maze(cols=COLS, rows=ROWS):
             x, y = stack.pop()
         else:
             break
+
     return grid
 
 def build_walls(grid):
@@ -51,24 +51,3 @@ def build_walls(grid):
             if bottom and r == rows - 1:
                 group.add(Wall(x - half, y + CELL - half, CELL + WALL, WALL))
     return group
-
-def solve_bfs(grid, start, goal):
-    rows, cols = len(grid), len(grid[0])
-    prev = {start: None}
-    queue = deque([start])
-    while queue:
-        cur = queue.popleft()
-        if cur == goal:
-            break
-        c, r = cur
-        for i, (dx, dy) in enumerate(DIRS):
-            nxt = (c + dx, r + dy)
-            if (not grid[r][c][i] and nxt not in prev
-                    and 0 <= nxt[0] < cols and 0 <= nxt[1] < rows):
-                prev[nxt] = cur
-                queue.append(nxt)
-    path, node = [], goal
-    while node is not None:
-        path.append(node)
-        node = prev[node]
-    return path[::-1]
