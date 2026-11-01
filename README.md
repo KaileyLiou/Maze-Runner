@@ -2,6 +2,8 @@
 
 A Pygame maze project I built up over a few labs in my A.I. for Game Programming class. It is a maze where AI characters search for the exit and I can watch how they think.
 
+<img width="793" height="588" alt="Screenshot 2026-11-01 at 6 26 46 PM" src="https://github.com/user-attachments/assets/8330e647-98fb-4e49-ba55-4bf0a07a6d7e" />
+
 ## What it does
 - Generates a random maze every time using DFS (recursive backtracker)
 - Player you can move around with the arrow keys or WASD
